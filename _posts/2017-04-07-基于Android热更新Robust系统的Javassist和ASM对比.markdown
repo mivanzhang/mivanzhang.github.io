@@ -4,7 +4,7 @@ title:  "基于Android热更新Robust系统的Javassist和ASM对比"
 date:   2017-06-01 15:26:12 +0800
 categories: Robust系列
 ---
-#简述
+# 简述
 最初在Android热更新项目[Robust](https://github.com/Meituan-Dianping/Robust)使用Javassist工具，为了项目的快速上线，Javassist的学习成本比较低，直接插入的是Java代码，不用去理会底层的各种字节码指令和栈帧结构，使得Robust项目在初期进展很快，但是随着[Robust](https://github.com/Meituan-Dianping/Robust)的快速推广，使用Javassist的问题就暴露出来；但是ASM就是一个更好的选择吗？其实也不一定，因为ASM这个工具固然优秀，但是学习成本比较，需要对底层的自己字节码指令有一些多多少少的了解，这就增加了学习的难度，导致并不容易快速上手。  
 
 在这篇文章，我们并不讨论Javassist和ASM之间的性能之类的区别，仅仅从一个项目的角度来查看到底哪一个工具更加适合，两者各有千秋，“存在即是合理的”，当然类似的字节码工具还有很多，受限于各大公司的技术栈和场景，大家选取的工具可能略有不同。
@@ -109,6 +109,6 @@ categories: Robust系列
 
 虽然官方有提供一个工具[ASMifier](http://asm.ow2.org/doc/faq.html#Q10)来生成代码，但是明显感觉到文档更新不及时，最新的ASM5.0.3按照文档的步骤无法成功生成字节码代码，也是比较心累的一项，需要自行找[解决办法](http://yangbolin.cn/2014/07/27/how-to-use-asmifier/)。
 
-#总结
+# 总结
 Javassist的字节码工具在在处理其他字节码工具生成的代码时出现了bug，表现最为突出的就是AspectJ，当我们使用AspectJ的时候，AspectJ会生成一些类, Javassist处理这些类的特定情况下才会出现问题，一般不会遇到。所以你的项目如果比较简单，没有使用众多不同的字节码工具，最优的方法肯定是Javassist啦，ASM学习和使用成本有点高，虽然功能很强大。
 
