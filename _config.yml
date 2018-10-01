@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 美团点评安卓工程师
+title: 水漾墨白
 email: mivanzhang@outlook.com
-description: 一个想成为诗人的软件工程师，在美团负责底层SDK的开发，重点参与Robust热更新项目，主要负责自动化埋点和自动化补丁
+description: 一个想成为诗人的软件工程师，资深韭菜
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mivanzhang
