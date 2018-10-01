@@ -2,7 +2,7 @@
 layout: post
 title:  "区块链基本概念"
 date:   2018-10-01 15:26:12 +0800
-categories:区块链系列
+categories: 区块链系列
 ---
 以下内容来源于网络
 
