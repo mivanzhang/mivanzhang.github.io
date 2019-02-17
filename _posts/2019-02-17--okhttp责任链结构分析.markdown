@@ -1,0 +1,104 @@
+---
+layout: post
+title:  "源码分析"
+date:   2019-02-17 22:26:12 +0800
+categories: 技术--android
+---
+
+
+# 架构
+这篇文章是来分析责任链模式到底是如何在整个okhttp网络链条里体现的？首先来说，通常的一个OKHTTP的请求是如下代码：
+
+```java
+    OkHttpClient  client = new OkHttpClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
+        Request request = new Request.Builder()
+                .url("http://www.baidu.com")
+                .get()
+                .build();
+        Call call = client.newCall(request);
+        try{
+            Response response = call.execute();//调用同步请求
+            System.out.println(response.body().string());
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+```
+我对`` call.execute()``这段代码是如何运行以及众多的``Interceptor``是如何生效比较好奇，让我们进入源码查看一下：
+
+``call``接口只有一个实现``RealCall``，我们直接看他的execute方法就好：
+
+```java
+     @Override public Response execute() throws IOException {
+    //这里表明一个请求只能执行一次
+    synchronized (this) {
+      if (executed) throw new IllegalStateException("Already Executed");
+      executed = true;
+    }
+    captureCallStackTrace();
+    //接口回调，表示请求已经开始
+    eventListener.callStart(this);
+    try {
+      //看到这里我以为dispatcher的executed才是主角？
+      client.dispatcher().executed(this);
+      //其实，这句话才是主角尼
+      Response result = getResponseWithInterceptorChain();
+      if (result == null) throw new IOException("Canceled");
+      return result;
+    } catch (IOException e) {
+      eventListener.callFailed(this, e);
+      throw e;
+    } finally {
+      client.dispatcher().finished(this);
+    }
+  }
+```
+很容易被名字给误导了：`` client.dispatcher().executed(this);``,让人误以为整个方法执行的核心实在这里，这据代码执行之后，只是把当前的Call加入到一个List列表里。并没有做多余的事情，那让我们把重心放在``getResponseWithInterceptorChain``方法上：
+
+```java
+    Response getResponseWithInterceptorChain() throws IOException {
+    // Build a full stack of interceptors.
+    List<Interceptor> interceptors = new ArrayList<>();
+    interceptors.addAll(client.interceptors());
+    interceptors.add(retryAndFollowUpInterceptor);
+    interceptors.add(new BridgeInterceptor(client.cookieJar()));
+    interceptors.add(new CacheInterceptor(client.internalCache()));
+    interceptors.add(new ConnectInterceptor(client));
+    //上面的代码添加了一堆interceptors，但是他们是如何运转的尼？
+    if (!forWebSocket) {
+      interceptors.addAll(client.networkInterceptors());
+    }
+    interceptors.add(new CallServerInterceptor(forWebSocket));
+
+    Interceptor.Chain chain = new RealInterceptorChain(interceptors, null, null, null, 0,
+        originalRequest, this, eventListener, client.connectTimeoutMillis(),
+        client.readTimeoutMillis(), client.writeTimeoutMillis());
+    //下面这行代码是不是很熟悉？在我们自定义interceter的时候，总是能用到这句话，当然这也是责任链最大的体现
+    return chain.proceed(originalRequest);
+  }
+```
+```Interceptor.Chain```的实现也只有一个，那就是：```RealInterceptorChain```我们在看看```RealInterceptorChain```的``proceed``方法
+```java
+  public Response proceed(Request request, StreamAllocation streamAllocation, HttpCodec httpCodec,
+      RealConnection connection) throws IOException {
+    if (index >= interceptors.size()) throw new AssertionError();
+
+    calls++;
+// 省略了部分代码
+
+    // Call the next interceptor in the chain.
+    RealInterceptorChain next = new RealInterceptorChain(interceptors, streamAllocation, httpCodec,
+        connection, index + 1, request, call, eventListener, connectTimeout, readTimeout,
+        writeTimeout);
+    Interceptor interceptor = interceptors.get(index);
+    Response response = interceptor.intercept(next);
+  
+    return response;
+  }
+```
+我第一次看到整这部分代码的时候，并没有觉得有什么特别的地方，甚至我还在想，这里确定调用了所有的intercepter了吗？怎么看这里也没有一个``for``循环呀，我仔细看了成员变量，发现有一个：``index``的整型变量，直觉感觉这个就是``Interceptor``的数组下标，可是在哪里递增的呢？我查找了index修改的地方，只有一处：``proceed``中构造``RealInterceptorChain``对象的时候，那整个对象被用来干啥了呢？，传递给了当前``RealInterceptorChain``中指定index的``Interceptor``,而我们在``Interceptor``中还要调用``chain.proceed(originalRequest)``,所以是不是觉得有点懵？
+
+换句话说：在``RealCall``会创建第一个``RealInterceptorChain``对象，我们称为chain0，此时的index=0，chain0的 ``proceed``方法会创建第二个``RealInterceptorChain``对象，称为chain1，此时index加一，index=1，chain1被传递给第index个``Interceptor``，而在每个intercepter里面都需要调用 ``proceed``方法，而在 ``proceed``方法里优惠继续创建第index+1``RealInterceptorChain``对象，以此下去...
+
+最终完成了对所有``Interceptor``的遍历，并且逐层返回Response。整个责任链设计挺巧妙。
+
+总结来说，就是``RealInterceptorChain``中 ``proceed``方法调用``Interceptor``的``intercept``方法，而``intercept``方法有调用``RealInterceptorChain``中 ``proceed``方法，子子孙孙无穷尽也。实现了对整个链条的调用
