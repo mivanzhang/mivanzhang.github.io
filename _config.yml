@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: 水漾墨白
 email: mivanzhang@outlook.com
-description: 一个想成为诗人的软件工程师，资深韭菜
-baseurl: "" # the subpath of your site, e.g. /blog
+description: 一个想成为诗人的软件工程师，欢迎关注公众号 
+baseurl: "https://mivanzhang.github.io/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mivanzhang
 github_username:  mivanzhang
