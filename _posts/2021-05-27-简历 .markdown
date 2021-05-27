@@ -1,0 +1,29 @@
+## 张梦
+* Email: mivanzhang@foxmail.com
+* 手机号:  18518461933(微信同号)
+* Github: [https://github.com/mivanzhang](https://github.com/mivanzhang)
+
+## 教育
+2011.09~2015.06   西安交通大学    软件学院 本科
+
+<!--## 技能
+* Android Gradle插件开发，主导开发热更新系统[Robust](https://github.com/Meituan-Dianping/Robust)
+* 
+* Experiened in app architecture.
+* Have some experience in Scrum development process and continuous integration on Android.-->
+
+## 工作经历
+
+##### [快手](https://www.kuaishou.com/) Android⼯程师 2018.12⾄今
+* 快手App的冷启动耗时，p50从5.6s下降到4s，主要工作有解决线上耗时点以及线下实验室对劣化进行监控：
+   *  引入并发的启动框架；核心网络请求提前；日志缓存；x2c等
+   *  修改最小集合自动触发冷启动耗时；分版本冷启动耗时对比；定时检查主干分支代码等
+* Flutter混合开发相关，主要负责中台化混合⻚⾯栈管理，⽀持引擎按需加载、动态释放、强类型的路由跳转等，整个Flutter模块动态下发，避免apk体积的增⼤。Flutter engine的工程化，完成Flutter engine的瘦身，提供了中台化的解决方案，推广到各个团队。参与部分Flutter动态化相关的工作
+* 魔改热更新Tinker，整体优化热更新成功率从80%提升到94%，整合为中台化SDK推⼴到内部诸多APP,快⼿代码模块化拆分，制定了分⽀模型，⼦模块打包模板，规范⼦库打包升级流程，落实Code Review责任⼈制度
+
+##### [北京链生长科技有限公司](https://www.fbee.one/) Android组技术负责人、以太坊开发者 2018.03-2018.11
+*  创业公司，完成了两款APP的开发与上线：以太坊钱包FbeePay以及区块链社区Fbee 开发⼯作与上线
+
+##### [美团](https://www.meituan.com/) Android工程师 2015.07-2018.03
+* [热更新系统Robust](https://github.com/Meituan-Dianping/Robust)主研发工程师，在该项目主要负责使用AOP技术（Javassist为主、辅以ASM）对APP内所有方法插入满足特定需要的Hook代码、以及补丁的自动化生成(根据修改的代码，自动、准确的把修复bug的代码翻译成线上APP可以运行的代码，动态的下发可执行的代码)，项目涉及到大量的字节码操作，项目的难点在于正式发布的APK是经过ProGuard处理的，需要把补丁也按照相同的ProGuard规则进行混淆等操作。该项目已经在GitHub开源，获赞4k。同时有两篇文章发布在美团技术博客：[Android热更新方案Robust](https://tech.meituan.com/android_robust.html) 以及 [Android热更新方案Robust开源，新增自动化补丁工具](https://tech.meituan.com/android_autopatch.html)
+* 同时负责诸多通用SDK的开发和维护，比如说UUID（美团内部多APP共享唯一标识符，服务器生成、保存在客户端的唯一标识符）、SNTP（Standard network time Protcol）标准网络时间SDK（提出了过滤波动值的算法，并获得专利）
