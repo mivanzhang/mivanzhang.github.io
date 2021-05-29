@@ -1,30 +1,23 @@
 ## Meng Zhang
 * Email: mivanzhang@foxmail.com
-* Phone:  18518461933
+* Phone:  +86  18518461933
 * Github: [https://github.com/mivanzhang](https://github.com/mivanzhang)
 
 ## Education
-2011.09~2015.06   Xi'an Jiaotong University Software Engineering Bachelor
+2011.09~2015.06 　Xi'an Jiaotong University 　 Software Engineering Bachelor
 
 
 ## Experience
 
-##### [KuaiShou](https://www.kuaishou.com/) Android engineer of KuaiShou Android app team 2018.12 to Present
-* The cold startup time of Kuaishou，p50 decrease from 5.6s to 4s，fix online time-cost issuses and offline code check autimatically：
-   *  Execute start-up tasks parallelly,prefetch network，buffering logs，xml to code
-   *  mininum start-up colelctions of class,check cold startup time periodly
-* Flutter engine builds, makes it as slimer as possible.Flutter hybird develops，mainly responsible for the management of mixed page stacks, supporting engine loading on demand
+##### [KuaiShou](https://www.kuaishou.com/)　Android engineer of KuaiShou Android app team 　2018.12 to Present
+* The cold startup time of Kuaishou app,p50 decreases from 5.6s to 4s,fix online time-cost issuses and offline code check autimatically：
+   *  Execute start-up tasks parallelly,prefetch necessary network,buffer startup logs, change xml to code
+   * Monitor mininum start-up colelctions of class,check cold startup time periodly
+* Customing flutter engine builds,in order to make it as slimer as possible both for android and iOS.Flutter mixin develops,I am responsible for the management of mixed page stacks, supporting engine loads on demand
 
-##### [GrowUp](https://www.fbee.one/) Android team leader 2018.03~2018.11
-* A startup company.The mainly Android developer for two APPs: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) and the blockchain community [Fbee](https://www.fbee.one/) Development work
+##### [Chain GrowUp](https://www.fbee.one/)　Android team leader 　2018.03~2018.11
+* A blockchain startup company.The core Android developer for two apps: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) and the blockchain community [Fbee](https://www.fbee.one/) 
 
-##### [Meituan.com](https://www.meituan.com/) Android Engineer 2015.07 ~2018.03
+##### [Meituan.com](https://www.meituan.com/) 　 Android Engineer 　2015.07 ~2018.03
 
-* [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust) The sponsor of this project, mainly responsible for using AOP
-technology (Javassist mainly, supplemented by ASM) to insert a code snippets in first line of all the methods in the APP to the hook method flow, and the automatic generation of patches (The code that fixes the bug is translated into the code which the online APP
-can run) The project involves a lot of bytecode
-operations，The difficulty of the project is that the officially released APK is processed by ProGuard,
-and the patch needs to be obfuscated according to the same ProGuard rules.The project has been
-open sourced on GitHub, praised 4k stars。At the same time, two articles were posted on the Meituan
-Technology Blog：[Android hot patch]((https://tech.meituan.com/android_robust.html)： [Robust and Android hot patch solution Robust open source,
-add automated patch tools]((https://tech.meituan.com/android_autopatch.html))
+* [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust)   The sponsor of this project, using AOP technology (Javassist mainly, supplemented by ASM) to insert a code snippet which is a if-statement before first line of every method  in the app to the hook method flows, and automaticly generating patches (the code that fixes the bug is translated into the code which the online app can run automaticly). The project involves a lot of bytecode operations.The difficulty of the project is that the official released APK is processed by ProGuard,and the patch needs to be obfuscated according to the same ProGuard rules.The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), getting more than 4k stars. At the same time, two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html)
