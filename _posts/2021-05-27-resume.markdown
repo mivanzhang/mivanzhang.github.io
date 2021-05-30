@@ -10,10 +10,10 @@
 ## Experience
 
 ### [KuaiShou](https://www.kuaishou.com/)　Android Engineer 　2018.12 to Present
-* The cold startup time of Kuaishou app,p50 decreases from 5.6s to 4s,fix online time-cost issuses and offline code check autimatically：
+* The cold startup time of KuaiShou app,p50 decreases from 5.6s to 4s,fix online time-cost issuses and offline code check autimatically：
    *  Execute start-up tasks parallelly,prefetch necessary network,buffer startup logs, change xml to code
    * Monitor mininum start-up colelctions of class,check cold startup time periodly
-* Customing flutter engine builds,in order to make it as slimer as possible both for android and iOS.Flutter mixin development,also responsible for the management of mixed page stacks, supporting engine loads on demand
+* Customing [Flutter](https://flutter.dev/) engine builds,in order to make it as slimer as possible both for Android and iOS.Flutter mixin development,also responsible for the management of mixed page stacks, supporting engine loads on demand
 
 ### [Chain GrowUp](https://www.fbee.one/)　Android Team Leader 　2018.03~2018.11
 * A blockchain startup company.The core Android developer for two apps: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) and the blockchain community [Fbee](https://www.fbee.one/) 
