@@ -10,15 +10,18 @@
 ## Experience
 
 ### [KuaiShou](https://www.kuaishou.com/)　Android Engineer 　2018.12 to Present
-* The cold startup time of KuaiShou app,p50 decreases from 5.6s to 4s,fix online time-cost issuses and offline code check autimatically：
-   *  Execute start-up tasks parallelly,prefetch necessary network,buffer startup logs, change xml to code
-   * Monitor mininum start-up colelctions of class,check cold startup time periodly
-* Customing [Flutter](https://flutter.dev/) engine builds,in order to make it as slimer as possible both for Android and iOS.Flutter mixin development,also responsible for the management of mixed page stacks, supporting engine loads on demand
+* The cold startup time of KuaiShou app, p50 decreases from 5.6s to 4s, fix online time-cost issuses and offline code(需要修改。这个词使用的不好) check autimatically：工作量+措施
+   *  Execute start-up tasks parallelly, prefetch necessary network,buffer startup logs, change xml to code
+   * Monitor mininum start-up colelctions of class, check cold startup time periodly
+* Customing [Flutter](https://flutter.dev/) engine builds, in order to make it as slimer as possible，（替换成数据，android 0kb，） both for Android and iOS.Flutter mixin development,also responsible for the management of mixed page stacks, supporting engine loads on demand
+* tinker加上
 
 ### [Chain GrowUp](https://www.fbee.one/)　Android Team Leader 　2018.03~2018.11
-* A blockchain startup company.The core Android developer for two apps: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) and the blockchain community [Fbee](https://www.fbee.one/) 
+* 作为领导带领团队，完成从开发、上线、到后期监控和持续迭代 ，突出自己的做的事情。The core Android developer for two apps: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) and the blockchain community [Fbee](https://www.fbee.one/) 
 
 ### [Meituan.com](https://www.meituan.com/) 　 Android Engineer 　2015.07 ~2018.03
 
-* [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust)   The sponsor of this project, insert a if-statement in the first line of every method with AOP. Automaticly generating patches according to bug-fixed code,applying the same ProGuard rules. The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), getting more than 4k stars.
+* [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust)  s设计一套新的模式，上线会发生  insert a if-statement in the first line of every method with AOP.   The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), getting more than 4k stars.
 *  At the same time, two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html)
+*  添加其他项目，细化robust项目，第一年做的事情是啥？第二年怎么m
+### TECHNICAL SKILLS
