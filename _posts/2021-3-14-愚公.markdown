@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "随笔"
+title:  "愚公与愚"
 date:   2021-3-12 22:26:12 +0800
 categories: 随笔
 ---
