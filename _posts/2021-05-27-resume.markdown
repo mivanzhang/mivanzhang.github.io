@@ -16,7 +16,7 @@
 ### [Chain GrowUp](https://www.fbee.one/)　Android Team Leader 　2018.03~2018.11
 * Led the team (2 people) to complete the continuous iteration from development, testing, launch, and complete the development of two APPs from zero to launch: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) and the blockchain community [Fbee](https://www.fbee.one/).
 
-### [Meituan.com](https://www.meituan.com/) 　 Android Engineer 　2015.07 ~2018.03
+### [Meituan](https://www.meituan.com/) 　 Android Engineer 　2015.07 ~2018.03
 
 * [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust) A hotfix SDK with **99.9%** success rate. It will insert code for almost every method and generate online-runable code with the same ProGuard rules when we built apk. The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), getting more than 4k stars. Also two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html).
 * Participated in the construction of company-level SDKs: UUID(Uniform Device Identifier) and Passport SDK.
