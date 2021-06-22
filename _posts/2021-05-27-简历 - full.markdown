@@ -6,18 +6,22 @@
 ## 教育
 2011.09~2015.06   西安交通大学    软件学院 本科
 
+## 技能
+* Java基础扎实，熟悉多线程
+* 了解JVM虚拟机：内存模型、GC、垃圾回收算法
+
 ## 工作经历
 
 ### [快手](https://www.kuaishou.com/)  　 Android⼯程师 　2018.12⾄今
 * 快手App的冷启动耗时，p50 下降**28%**（从5.6s下降到4.0s），主要工作有解决线上耗时点以及线下实验室对劣化进行监控，采取的措施有：引入并发的启动框架；核心网络请求提前；启动日志缓存；x2c等；监控启动最小集合的修改；定时检查主干分支代码等。
-* Flutter混合开发相关，主要负责中台化混合⻚⾯栈管理，⽀持引擎按需加载。Flutter Engine的工程化，完成Flutter Engine的定制化瘦身，Android包体积下降**85.7%**（从3.5M下降到0.5M），提供了中台化的解决方案，推广到各个团队。给Engine官方提过[PR](https://github.com/dart-lang/sdk/pull/43312)，并被接受。
+* Flutter混合开发相关，主要负责中台化混合⻚⾯栈管理，⽀持引擎按需加载、动态释放引擎。Flutter Engine的工程化，完成Flutter Engine的定制化瘦身，Android包体积下降**85.7%**（从3.5M下降到0.5M），提供了中台化的解决方案，推广到各个团队。给Engine官方提过[PR](https://github.com/dart-lang/sdk/pull/43312)，并被接受。
 * 魔改热更新Tinker，整体优化热更新成功率从80%提升到**94%**，整合为中台化SDK推⼴到内部诸多APP,快⼿代码模块化拆分，制定了分⽀模型，⼦模块打包模板，规范⼦库打包升级流程，落实Code Review责任⼈制度。
 
 ### [北京链生长科技有限公司](https://www.fbee.one/) 　Android组技术负责人、以太坊开发者　 2018.03-2018.11
-* 带领团队（2人），主导了两款APP的从开发、测试、上线、监控以及后续版本的持续迭代。
+* 带领团队（2人），主导2款APP从开发、测试、上线、监控以及后续版本的持续迭代：**FbeePay**，**Fbee**。
 * 以太坊ERC-20钱包[FbeePay](https://www.fbee.one/fbeepay)，支持批量转账以及取消转账，对比特币转账原理有调研，但并未来及上线。
 * 区块链社区[Fbee](https://www.fbee.one/)，类似于百度贴吧的运行模式，项目方可以创建社区和粉丝互动，进行代币空投（后端团队提供批量空投的工具）。
 
 ### [美团](https://www.meituan.com/) 　Android工程师 　2015.07-2018.03
 * [热更新系统Robust](https://github.com/Meituan-Dianping/Robust) 主研发工程师，无差别下发补丁，成功率高达 **99.9%** 的热更新系统，主要负责编译期代码插桩和补丁的自动化生成(把修复bug的代码翻译成线上APP可以运行的代码)，在[GitHub开源](https://github.com/Meituan-Dianping/Robust)，**4k** stars。同时有两篇文章发布在美团技术博客：[Android热更新方案Robust](https://tech.meituan.com/android_robust.html) 以及 [Android热更新方案Robust开源，新增自动化补丁工具](https://tech.meituan.com/android_autopatch.html)。
-* 参与公司级SDK的建设，提供UUID（美团内部多APP共享唯一标识符，服务器生成、保存在客户端的唯一标识符））、Passport（用于所有美团系APP的登录、登出和注册）和SNTP（Standard Network Time Protcol）标准网络时间SDK（提出了过滤波动值的算法，并获得专利）等功能。
+* 参与公司级SDK的建设，提供UUID（美团内部多APP共享唯一标识符，服务器生成、保存在客户端的唯一标识符）、Passport（用于所有美团系APP的登录、登出和注册）和SNTP（Standard Network Time Protcol）标准网络时间SDK（提出了过滤波动值的算法，并获得专利）等功能。

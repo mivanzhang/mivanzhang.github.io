@@ -1,0 +1,115 @@
+---
+layout: post
+title:  "TikTok新加坡面试总结"
+date:   2021-06-23 22:26:12 +0800
+categories: 技术--android
+---
+
+
+# TikTok
+TikTok是国内的字节面试官来面试，面试官让我选择面试语言，我选择了英语，然后感觉整体面试下来还挺不错的，又是两个中国人在用英语面试，但是我本意就是在锻炼英语，很荣幸面试官也没有拒绝，总体觉得虽然大家英语都不标准，但是彼此都能理解，这次我清晰的感觉到语言并不是一个特别大的障碍，因为程序员的产物更是一种世界通用语言，哈哈，我觉得这是程序员的最大的优势。更多的给我的感觉，我们熟悉好多常用的单词，却不能熟悉所有的使用场景，常常会很意外一些单词的使用方法，这也是英语需要多加使用，熟悉各种场景，有更多的机会来使用，我相信我的英语只会更上一层楼。
+
+
+回到正题，由于双方的都是用英语面试，整体流程也就显得很和谐和友好，并没有特别多的刁难的问题，因为我觉得面试官可能也没有准备好，或者是觉得太难的问题，我也可能听不懂，经历了这些次的面试，我也渐渐的发现有些 计算机领域的专有名词，因为好久好久没见过，所以当别人提起的时候，我很容易蒙蔽，就像刚刚和agoda的面试官聊天一样，他们提到co-review,我就很懵逼，不知道这是啥，还好面试官给我解释了下，其实就是code-review，只不过人家简称了，所以我就对应不上，感觉这些都是需要填平的坑，随着和别人的交流深入，问题我觉得会越来越少。
+
+整个面试流程也很友好，并没有什么奇奇怪怪的问题，可能是面试官被我的决心感动，哈哈，首先是面试官的自我介绍，我觉得这点很专业，以后我面试别人时也要加上自我介绍，面试问题都很常规：
+* final和open关键字的用法
+* mvc、mvp、mvvm的区别
+* jetpack是什么以及如何使用
+* 还有一些问题想不起来，整体问题比较中规中矩
+项目经验也有一些，更多的重点时放在下面的算法题上，这个算法题并不复杂，但是字节的特点时循序渐进，让我来继续优化这个算法题，从笼统的说，这个算法最坏的情况运行时间必然时O(n^2),面试官也清晰知道，虽然下面算法复杂度也是o(n^2)，但必然存在一种平均时间会稍微短点的方法，我想到的就是缓存计算结果，可是我发现这个计算结果的缓存，并不能有效的降低多少工作量，所以陷入了迷茫，不知道该怎么进一步的优化，最后向面试官承认没有合理的使用缓存来降低运算量，面试官表示没关系。
+
+后续就是提问环节，面试官最好奇我为啥想去国外，哈哈，每个人都有自己的追求，合适自己的才是最好的，现在不出去看看，难道等自己老了吗？
+
+
+```java
+
+Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.
+
+Example 1:
+
+Input: nums = [1,1,1], k = 2
+Output: 2
+Example 2:
+
+Input: nums = [1,2,3], k = 3
+
+[1 2，
+3]
+Output: 2
+ 
+
+Constraints:
+
+1 <= nums.length <= 2 * 104
+-1000 <= nums[i] <= 1000
+-107 <= k <= 107
+
+
+
+8 -2  -5 2 6 10   k=8
+1
+time:O(n^2)
+
+8 -8 8 -8 8  
+
+ public int  subArraySum(int []array,int k){
+    
+    if(array==null||array.length()<1){
+    		return 0;
+    }
+    int count=0;
+    for(int i=0;i<array.length();i++){
+    	int sum=array[i];
+      if(sum==k){
+       count++;
+      }
+       for(int j=i+1;j<array.length();j++){
+          sum+=array[j];
+          if(sum==k){
+            count++;
+          }
+       }
+    }
+    return count;
+ }
+ 
+ 
+  public int  subArraySum(int []array,int k){
+    
+    if(array==null||array.length()<1){
+    		return 0;
+    }
+    
+    int [][]arrayMap=new int[array.length()][array.length()];
+    fillsArray(arrayMap);
+    int count=0;
+    for(int i=0;i<array.length();i++){
+    	int sum=array[i];
+      if(sum==k){
+       count++;
+      }
+		
+       for(int j=i+1;j<array.length();j++){
+       
+       	if(arrayMap[i][j]!=-1){
+        	if(arrayMap[i][j]==k){
+           count++;
+          }
+          continue;
+        	
+        }else{
+          sum+=array[j];
+          arrayMap[i][j]=sum;
+           if(sum==k){
+            count++;
+          }
+        }
+        
+        
+         
+       }
+    }
+    return count;
+ }
+```
