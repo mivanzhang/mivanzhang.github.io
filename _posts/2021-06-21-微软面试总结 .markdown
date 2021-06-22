@@ -1,0 +1,89 @@
+---
+layout: post
+title:  "2021-06微软面试总结"
+date:   2021-06-21 22:26:12 +0800
+categories: 技术--android
+---
+
+
+# 微软
+本以为是英文面试，可是没有想到全程都是中文，面对中文面试官我也是把压抑了好久的话，全部说出来了，光是自我介绍我就跟他聊了十分钟，不再是制式的干巴巴的英文介绍，想说的都会收到限制，但是没有关系，我一直觉得语言并不是障碍，真正的是障碍是没有机会说出口，得不到锻炼，单词量大家肯定都足够使用，但是唯独不知道这些数据怎么组合在一起，这才是最大的问题。
+
+自我介绍大约十分钟后，面试开始根据我的简历中的项目问我问题，整体觉得面试官人很不错，但感觉并不是一个Android开发工程师，所以问题更偏向于我的项目经验，问我的设计思路，以及他对问题的理解，更多的是一种交流，唯一一次他向他了解的方向引导的是他问我，https是怎么保证加密安全的，我就根他说是怎么进行非对称加密以及对称加密怎么融合，问我客户端怎么对公钥进行验证，本地的根证书啥的，如果本地的证书被篡改了，，那就啥也不安全。
+
+最后是一道循序渐进的项目设计题，这道题整体没有一个特别清晰的要求和设计，所以一开始我也听蒙蔽，走一步看一步，然后面试官不断的增加要求，不断的调整代码，整体觉得渐进是深入
+
+* 显示根据同步的接口设计一个异步的接口
+* 然后是异步接口怎么解决缓存的问题
+* 存在大量图片请求的情况要怎么办？
+* 以及多线程情况下（这个问题并不是明确提出的，但是面试官是在这方问的问题，所以还是要搞清楚面试官更在意的点是什么）
+* 最后快要没有时间的时候，说我的代码格式的问题，好委屈呀，没时间了，也来不及调整
+
+最后是彼此的简单沟通，介绍自己的团队组成以及负责的事情
+提问的问题：
+1、发版频率
+2、团队组成
+
+```java
+
+Bitmap downloadImage(String url); // API
+
+interface OnDownloadListener {
+  void onDownload(Bitmap image);
+}
+private Map<String,Bitmap> cache=new CurrentHashMap();
+private Map<String,List<OnDownloadListener>> listenerMap=new CurrentHashMap();
+
+void downloadImageAsync(String url, OnDownloadListener listener) {
+  	//先从缓存中读取
+  	if(cache.get(url)!=null){
+      	listener.onDownload(cache.get(url);
+      	return;
+  	}
+    // ----------------2
+     List list=listenerMap.get(url);                       
+    //检查是否正在请求                        
+  	if(list!=null){
+      syncronized(list){
+        if(!list.isEmpty()){
+     		list.add(listener);
+            return;
+        }else{
+          	if(cache.get(url)!=null){
+              listener.onDownload(cache.get(url);
+              return;
+  			}
+        }
+      }
+    }
+                            
+    List<OnDownloadListener> listenerList=new ArrayList<>();                     
+    listenerList.add(listener);
+  	listenerMap.put(url,listenerList);
+                            
+  	new Thread(new Runnable{
+  		public void run(){
+         	Bitmap bitmap=downloadImage(url);
+            // ---------1 
+          
+          	cache.put(url,bitmap);
+            List list=listenerMap.get(url);
+          	syncronized(list){
+              	for( OnDownloadListener l:list){
+                    l.onDownload(bitmap);
+              	}
+              	list.clear();
+            }
+          	listenerMap.put(url,list);
+           // ----------1 
+  		
+    	}
+    
+  	}).start();
+}
+
+downloadImageAsync("https://baidu.com/a.jpg", xx);
+downloadImageAsync("https://baidu.com/a.jpg", xx);
+downloadImageAsync("https://baidu.com/a.jpg", xx)
+
+```

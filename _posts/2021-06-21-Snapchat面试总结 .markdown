@@ -1,0 +1,118 @@
+---
+layout: post
+title:  "Snapchat北京面试总结"
+date:   2021-06-23 22:26:12 +0800
+categories: 技术--android
+---
+
+
+# SnapChat
+依旧是两个中国人，全程英文面试，哈哈，SnapChat感觉对我的项目经验更感兴趣聊了挺多的Robust和tinker的，感觉面试官也是对国内的热更新相关的方向有所了解的，整体感觉还是比较nice，第一次给别人用英语讲解Robust的原理以及和Tinker的不同，面试官甚至还知道AndFix，我觉得这个面试官绝对不简单，聊了挺多的细节问题，比如说Robust的优缺点和tinker的优缺点，为什么我会负责robust，以及快手现在使用的是什么，为什么要切换到Robust等等问题，这些问题用中文我肯定是一点问题都没了，但是英文我第一次觉得我讲解的眉飞色舞，我也是第一次发现英语沟通可以这么顺畅，并不需很刻意的去记忆。
+
+关于算法题，面试官并没有理解我的思路，他一直尝试把我引导到他的思路，但是我一直不理解，大家彼此讨论了得要30分钟，最后时间不够了，他让我写完发给他，就有了下面的解决方案：
+
+
+```java
+
+//输入是一个meeting数组，每个meeting都有自己的开始和结束时间，求满足这一组meeting最小的room数是：
+
+//[1,3] [2,4][5,6]
+//需要两个room，来满足所有的会议
+
+package com.company.solutions;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
+public class RoomCount {
+    private boolean needLog = false;
+
+    public static void main(String[] args) {
+        // write your code here
+        RoomCount template = new RoomCount();
+        List<TimeSpan> inputMeetings = getTestData();
+        System.out.println("input data:\n" + inputMeetings + "\n");
+        System.out.println("room count:\n" + template.roomCount(inputMeetings));
+    }
+
+
+    private static List<TimeSpan> getTestData() {
+        List<TimeSpan> timeSpanList = new ArrayList<>();
+        timeSpanList.add(new TimeSpan(1, 3));
+        timeSpanList.add(new TimeSpan(2, 5));
+        timeSpanList.add(new TimeSpan(2, 4));
+        timeSpanList.add(new TimeSpan(5, 10));
+        timeSpanList.add(new TimeSpan(3, 10));
+        timeSpanList.add(new TimeSpan(5, 9));
+        timeSpanList.add(new TimeSpan(3, 7));
+        return timeSpanList;
+    }
+
+    static class TimeSpan implements Comparable<TimeSpan> {
+        public int startTime;
+        public int endTime;
+
+        public TimeSpan(int startTime, int endTime) {
+            if (startTime > endTime) {
+                throw new RuntimeException("end time should greater than start time");
+            }
+            this.startTime = startTime;
+            this.endTime = endTime;
+        }
+
+        public TimeSpan merge(TimeSpan timeSpan) {
+            this.startTime = Math.min(timeSpan.startTime, this.startTime);
+            this.endTime = Math.max(timeSpan.endTime, this.endTime);
+            return this;
+        }
+
+        @Override
+        public int compareTo(TimeSpan o) {
+            return this.startTime - o.startTime;
+        }
+
+        @Override
+        public String toString() {
+            return "TimeSpan{" +
+                    "startTime=" + startTime +
+                    ", endTime=" + endTime +
+                    '}';
+        }
+    }
+
+    public int roomCount(List<TimeSpan> meetingList) {
+        if (meetingList == null || meetingList.size() < 1) {
+            return 0;
+        }
+        Collections.sort(meetingList);
+        List<TimeSpan> roomList = new ArrayList<>();
+        for (TimeSpan timeSpan : meetingList) {
+            findAvaliableRoom(roomList, timeSpan);
+        }
+        if (needLog) {
+            System.out.println("room: occupation time:" + roomList.toString() + " \n");
+        }
+        return roomList.size();
+    }
+
+    private void findAvaliableRoom(List<TimeSpan> roomList, TimeSpan meeting) {
+        boolean createRoom = true;
+        //perform inert
+        for (TimeSpan room : roomList) {
+            //check room is suitable for meeting
+            // as we talked before,there is no differnce which room you put meeting in
+            if (room.endTime <= meeting.startTime) {
+                createRoom = false;
+                room.merge(meeting);
+                break;
+            }
+        }
+        //create a new room
+        if (createRoom) {
+            roomList.add(meeting);
+        }
+    }
+}
+```
