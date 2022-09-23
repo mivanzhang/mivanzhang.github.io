@@ -1,4 +1,5 @@
-# Meng Zhang
+# Ivan Zhang
+* Chinese Name: Meng Zhang
 * Email: mivanzhang@foxmail.com
 * Phone:  +86  18518461933
 * Location: Beijing 
@@ -10,14 +11,14 @@
 
 ## EXPERIENCE
 ### [KuaiShou](https://www.kuaishou.com/)　Android Engineer 　2018.12 to Present
-* Decreased ANR rate from **1.2%** to **0.7%**. 
+* Decreased ANR rate of Kwai which has more than 40 million DAUs (the biggest competitor of TikTok in Brazil) from **1.2%** to **0.7%**. 
 
-* Decreased p50 cold startup time of KuaiShou(second bigger)by **28%** (from **5.6s to 4.0s**), fixed time-cost issuses and monitored deterioration in the laboratory. 
+* Decreased p50 cold startup time of KuaiShou which has more than 300 million DAUs (second biggest short video company in China) by **28%** (from **5.6s to 4.0s**), fixed time-cost issuses and monitored deterioration in the laboratory. 
 * Customized [Flutter](https://flutter.dev/) engine builds. The size of Flutter engine for android decreased **85.7%** from **3.5M to 0.5M**. Familiar with Flutter mixin development. A [PR](https://github.com/dart-lang/sdk/pull/43312) was accepted by Flutter team.
-* Improved success rate of [Tinker](https://github.com/Tencent/tinker)(a SDK fixs online app's bug) from **80% to 94%**.
+* Improved success rate of [Tinker](https://github.com/Tencent/tinker) which allows android developers to fix online bugs from **80% to 94%**.
 
 ### [Chain GrowUp](https://www.fbee.one/)　Android Team Leader 　2018.03~2018.11
-* Led the team (2 people) to complete the continuous iteration from development, testing, launch.Completed the development of two APPs from zero to launch.
+* Led the team (2 persons) to complete the continuous iteration from development, testing, launch.Completed the development of two APPs from zero to launch:
 *  Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) which supported batch transaction and cancel transaction.
 * The blockchain community [Fbee](https://www.fbee.one/). The project party can create a community to interact with fans, and conduct token airdrops.
 
@@ -26,4 +27,4 @@
 * [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust) A hotfix SDK with **99.9%** success rate. It will insert code for almost every method and generate online-runable code with the same ProGuard rules when we built apk. The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), getting more than 4k stars. Also two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html).
 * Participated in the construction of company-level SDKs: UUID(Uniform Device Identifier) which was generated from the server and shared among all MeiTuan's apps and Passport SDK which was used to sign up, login in and login out among all.
 ## TECHNICAL SKILLS
-Proficient in *Java*, Also familiar with *shell* and *Kotlin*.
+Proficient in *Java*, Also familiar with *Kotlin* and *shell*.

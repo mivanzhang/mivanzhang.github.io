@@ -1,27 +1,43 @@
 # Meng Zhang
 * Email: mivanzhang@foxmail.com
-* Phone:  +86  18518461933
+* Phone:  +65 80396310 (WhatsApp)
 * Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
-
-## EDUCATION
-### 2011.09~2015.06 　Xi'an Jiaotong University 　 Software Engineering 　Bachelor
+* LinkedIn: [https://www.linkedin.com/in/meng-zhang-493a27213](https://www.linkedin.com/in/meng-zhang-493a27213)
 
 
 ## EXPERIENCE
-### [KuaiShou](https://www.kuaishou.com/)　Android Engineer 　2018.12 to Present
+<p style="text-align:left; font-size: 18px;line-height:100%"> <a href="(https://www.shopee.com/">Shopee</a> <span style="float:right;"> Singapore</span></p>
+<p style="text-align:left; font-size: 15px;line-height:50%">Android Engineer <span style="float:right;"> June 2022 ~ Present</span></p>
+
+* Decreased p50 cold startup time by **13%** using Baseline Profiles.
+
+<p style="text-align:left; font-size: 18px;line-height:50%"> <a href="(https://www.kuaishou.com/">KuaiShou</a> <span style="float:right;"> Beijing, China</span></p>
+<p style="text-align:left; font-size: 15px;line-height:50%">Android Engineer <span style="float:right;">Dec 2018 ~ June 2022</span></p>
+  
 * Decreased p50 cold startup time by **28%** (from **5.6s to 4.0s**), fixed time-cost issuses and monitored deterioration in the laboratory. 
 * Customized [Flutter](https://flutter.dev/) engine builds, loaded on demand, released dynamicly. The size of Flutter engine for android decreased **85.7%** from **3.5M to 0.5M**. Familiar with Flutter mixin development.
-* Improved success rate of [Tinker](https://github.com/Tencent/tinker)(A SDK fixs online app's bug) from **80% to 94%**.
-* Modularized KuaiShou App code, splited into many modules. Popularized code owner. Packaging acceleration.
+* Improved success rate of [Tinker](https://github.com/Tencent/tinker) (a SDK fixs online app's bug) from **80% to 94%**.
+* Modularized KuaiShou App code, splited into many modules and accelerated packaging speed for more than 200 Android developers.
 
-### [Chain GrowUp](https://www.fbee.one/)　Android Team Leader 　2018.03~2018.11
-* Led the team (2 people) to complete the continuous iteration from development, testing, launch.Completed the development of two APPs from zero to launch.
-*  Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) which supported batch transaction and cancel transaction.
-* The blockchain community [Fbee](https://www.fbee.one/). The project party can create a community to interact with fans, and conduct token airdrops.
+<p style="text-align:left; font-size: 18px;line-height:50%"> <a href="(https://www.fbee.one/">Chain GrowUp</a> <span style="float:right;"> Beijing, China</span></p>
+<p style="text-align:left; font-size: 15px;line-height:50%">Android Team Leader <span style="float:right;">Mar 2018 ~ Nov 2018</span></p>
 
-### [Meituan](https://www.meituan.com/) 　 Android Engineer 　2015.07 ~2018.03
+　 　
+* Launched two APPs from conception: Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) which support batch transaction and cancel transaction, and the blockchain community [Fbee](https://www.fbee.one/) which could create a community to interact with fans and conduct token airdrops.
+* Led the team to complete the continuous iteration of two apps from development, testing, launch.
 
-* [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust) A hotfix SDK with **99.9%** success rate. It will insert code for almost every method and generate online-runable code with the same ProGuard rules when we built apk. The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), getting more than 4k stars. Also two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html).
-* Participated in the construction of company-level SDKs: UUID(Uniform Device Identifier) which was generated from the server and shared among all MeiTtuan's apps and Passport SDK which was used to sign up, login in and login out among all.
+<p style="text-align:left; font-size: 18px;line-height:50%"> <a href="(https://www.meituan.com/">MeiTuan</a> <span style="float:right;"> Beijing, China</span></p>
+<p style="text-align:left; font-size: 15px;line-height:50%">Android Engineer<span style="float:right;">July 2015 ~ Mar 2018</span></p>
+
+
+* Opened source [Hotfix Patch Robust](https://github.com/Meituan-Dianping/Robust) on GitHub with more than 4k stars. It is a hotfix SDK with **99.9%** success rate. It inserts code for almost every method and generates online-runable code with the same ProGuard rules when developers build apk. Also two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html).
+* Participated in the construction of company-level SDKs: UUID (Uniform Device Identifier) which is generated by the server and shared among all MeiTtuan's apps (more than 10 apps) and Passport SDK which is used to sign up, login in and login out among all MeiTtuan's apps.
 ## TECHNICAL SKILLS
-Proficient in *Java*, Also familiar with *shell* and *kotlin*.
+<p style="text-align:left; font-size: 16px;line-height:50%"> Proficient in <span style="font-weight:bold;font-style: italic">Java</span>, also familiar with <span style="font-weight:bold;font-style: italic">Kotlin</span> and <span style="font-weight:bold;font-style: italic">Shell</span>.</p>
+
+
+## EDUCATION
+<p style="text-align:left; font-size: 16px;line-height:90%"> Bachelor of Science: Software Engineering <span style="float:right;">Sep 2011 ~ June 2015 </span></p>
+<p style="text-align:left; font-size: 15px;line-height:50%">Xi'an Jiaotong University<span style="float:right;">Xi'an, China</span></p>
+ 　 
+<p style="text-align:left; font-size: 14px">  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp &nbsp &nbsp &nbsp  <span style="float:right;"> </span></p>
