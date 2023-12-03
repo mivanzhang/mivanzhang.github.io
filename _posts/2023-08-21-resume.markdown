@@ -3,26 +3,26 @@
 * Chinese Name: Meng Zhang
 * Email: mivanzhang@foxmail.com
 * Phone:  +65  80396310
-* Location: Singapore 
+* Linkedin: [https://www.linkedin.com/in/mengzhang-android](https://www.linkedin.com/in/mengzhang-android)
 * Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
 
 ## EXPERIENCE
-### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Android Engineer 　Jun 2022 ~ Present
+### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Expert Engineer 　Jun 2022 ~ Present
 * Cold startup time optimization:
     * Decreased p80 cold startup time of Shopee which has more than 20 million DAUs (the biggest e-commerce in Southeast Asia) from **7.6s to 4.5s** by executing startup tasks in parallel, multi-level image cache and image preloading.
-     * Decreased **8%** of p80 cold startup time by introducing [Baseline Profiles](https://developer.android.com/topic/performance/baselineprofiles/overview) to Shopee , which involved upgrading of many gradle plugins. In the meantime, we could generate Baseline Profile automatically regardless of different ABtest values.
-   * Other optimazations: Increasing Main and Render Thread priority, Dex2Oat, prefetching and preloading.
-* App fluency opmization:
-  * Improved block rate by **14%** by loading images asynchronously with Glide and Kotlin coroutines optimization.
-  * Improved block rate by **5%** by imageview placeholder optimazation.
+     * Decreased **8%** p80 cold startup time by introducing [Baseline Profiles](https://developer.android.com/topic/performance/baselineprofiles/overview) to Shopee, which involved upgrading of many gradle plugins. In the meantime, we could generate Baseline Profile automatically regardless of different ABtest values.
+   * Other optimizations: Increasing Main and Render Thread priority, Dex2Oat, prefetching and preloading.
+* App fluency optimization:
+  * Improved **14%** block rate  by loading images asynchronously with Glide and Kotlin coroutines optimization.
+  * Improved **5%**  block rate   by imageview placeholder optimization.
 <!-- * Implemented many bussiness features, such as bottom bar ainimation and popup windows -->
 
-### [KuaiShou(Short Video)](https://www.kuaishou.com/) 　 Beijing　Android Engineer 　Dec 2018 ~ Jun 2022
+### [KuaiShou(Short Video)](https://www.kuaishou.com/) 　 Beijing　Expert Engineer 　Dec 2018 ~ Jun 2022
 * ANR optimization:
   * Decreased ANR rate of Kwai which has more than 40 million DAUs (the biggest competitor of TikTok in Brazil) from **1.2%** to **0.7%** by resolving Broadcast/Service/Input timeout issues.
 
 * Cold startup time optimization:
-    * Decreased p50 cold startup time of KuaiShou which has more than 300 million DAUs (second biggest short video company in China) by **28%** (from **5.6s to 4.0s**), fixed time-cost issuses and monitored deterioration in the laboratory. 
+    * Decreased p50 cold startup time of KuaiShou which has more than 300 million DAUs (the second biggest short video company in China) by **28%** (from **5.6s to 4.0s**), fixed time-cost issues and monitored deterioration in the laboratory. 
 * Others:
     * Customized [Flutter](https://flutter.dev/) engine builds. The size of Flutter engine for android decreased **85.7%** from **3.5M to 0.5M**(dynamic loading libapp.so). A [PR](https://github.com/dart-lang/sdk/pull/43312) was accepted by Flutter team.
     * Improved success rate of [Tinker](https://github.com/Tencent/tinker) from **80% to 94%** which allows android developers to fix online bugs.
@@ -32,12 +32,13 @@
 * Developed Ethereum wallet [FbeePay](https://www.fbee.one/fbeepay) which supported batch transactions and cancel transactions from scratch.
 * Released the blockchain community app [Fbee](https://www.fbee.one/). The users could create a community to interact with fans, and conduct token airdrops.
 
-### [Meituan(O2O)](https://www.meituan.com/) 　 Beijing　Android Engineer 　Jul 2015 ~ Mar 2018
+### [Meituan(O2O)](https://www.meituan.com/) 　 Beijing　Senior Android Engineer 　Jul 2015 ~ Mar 2018
 
 * Led development of a [hotfix SDK Robust](https://github.com/Meituan-Dianping/Robust)  with **99.9%** success rate. It allows developers to fix online bug without releasing a new version of app. It inserts code for almost every method and generates online-runable binary code with the same ProGuard rules automatically. The project had been [opened on GitHub](https://github.com/Meituan-Dianping/Robust), with more than 4k stars. Also two articles were posted on the Meituan Technology Blog：[Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html).
-* Participated in the construction of company-level SDKs: UUID(Uniform Device Identifier) which was generated from the server and shared among all MeiTuan's apps and Passport SDK which was used to sign up, login in and login out among all apps.
-## TECHNICAL SKILLS
+* Participated in the construction of company-level SDKs: UUID (Uniform Device Identifier) which was generated from the server and shared among all MeiTuan's apps and Passport SDK which was used to sign up, login in and login out among all apps.
+## SKILLS
 * Proficient in *Java* and *Kotlin*.
-* Good at app appformance.
+* Tools: Systemtrace and Perfetto.
+* Aspect-oriented Programming, Javassist and ASM.
 ## EDUCATION
 ### 2011.09~2015.06 　Xi'an Jiaotong University 　 Software Engineering 　Bachelor
