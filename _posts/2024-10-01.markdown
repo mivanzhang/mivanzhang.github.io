@@ -1,0 +1,61 @@
+# Meng Zhang
+* English Name: Ivan
+* Chinese Name: Meng Zhang
+* Email: mivanzhang@foxmail.com
+* Phone:  +65  80396310
+* Linkedin: [https://www.linkedin.com/in/mengzhang-android](https://www.linkedin.com/in/mengzhang-android)
+* Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
+
+## EXPERIENCE
+### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Expert Engineer 　Jun 2022 ~ Present
+* Cold startup time optimization:
+    * Reduced p80 cold startup time for Shopee (Southeast Asia’s largest e-commerce platform with over 20 million DAUs) from **7.6s** to **4.5s** by implementing parallel execution of startup tasks, multi-level image caching, and image preloading strategies.
+    * Achieved an **8%** reduction in p80 cold startup time by integrating Baseline Profiles, requiring extensive upgrades to multiple Gradle plugins, and automating Baseline Profile generation across different A/B test configurations. Grayscaled by regions.
+    * Additional optimizations included raising Main and Render Thread priority, Dex2Oat enhancements, and leveraging prefetching and preloading techniques.
+* App fluency optimization:
+  * Improved block rate by **14%** through asynchronous image loading using Glide.
+  * Achieved a **5%** improvement in block rate by optimizing ImageView placeholders for faster rendering.
+* Product and Communication Leadership:
+
+  * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
+  * Managed overall communication within the Chat team, overseeing the development and iteration of new message types, ensuring seamless feature rollouts and team coordination.
+  
+<!-- * Implemented many bussiness features, such as bottom bar ainimation and popup windows -->
+
+### [KuaiShou(Short Video)](https://www.kuaishou.com/) 　 Beijing　Expert Engineer 　Dec 2018 ~ Jun 2022
+* ANR optimization:
+  * Reduced ANR rate for Kwai (Brazil's largest TikTok competitor with over 40 million DAUs) from **1.2%** to **0.7%** by resolving Broadcast, Service, and Input timeout issues.
+
+* Cold startup time optimization:
+    * Improved p50 cold startup time for KuaiShou (China’s second-largest short video platform with over 300 million DAUs) by **28%**, reducing it from **5.6s** to **4.0s** through time-cost optimizations and continuous lab monitoring. 
+* Others:
+    * Customized Flutter engine builds, reducing the Android engine size by **85.7%** (from 3.5M to 0.5M) via dynamic loading of libapp.so; a related [PR](https://github.com/dart-lang/sdk/pull/43312) was accepted by the Flutter team.
+    * Improved [Tinker](https://github.com/Tencent/tinker) success rate from **80% to 94%**, enabling android developers to fix online bugs.
+    * Modularized KuaiShou’s app code, significantly accelerating packaging speed and enhancing development efficiency for over 200 Android developers.
+
+### [Chain GrowUp(Startup) ](https://www.fbee.one/)　 Beijing　Android Team Leader 　Mar 2018 ~ Nov 2018
+
+* Full-Cycle App Development:
+
+  * Led a team of 2 through continuous iteration, handling development, testing, and successful launch of two apps from scratch.
+  * Developed [FbeePay](https://www.fbee.one/fbeepay), an Ethereum wallet with support for batch transactions and transaction cancellations, built entirely from the ground up
+  * Released [Fbee](https://www.fbee.one/), a blockchain community app where users can create communities, engage with fans, and conduct token airdrops.
+
+
+### [Meituan(O2O)](https://www.meituan.com/) 　 Beijing　Senior Android Engineer 　Jul 2015 ~ Mar 2018
+* Hotfix SDK Development ([Robust](https://github.com/Meituan-Dianping/Robust)):
+
+   * Led the development of the [Robust SDK](https://github.com/Meituan-Dianping/Robust), achieving a **99.9%** success rate for hotfixes, enabling developers to fix online bugs without requiring a new app release.
+   * Designed Robust to insert code into nearly every method and generate online-runnable binary code automatically while adhering to ProGuard rules.
+   * The project was open-sourced on GitHub, accumulating over **4k** stars, and accompanied by two articles published on the Meituan Technology Blog: [Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html), discussing automated patching tools.
+* SDK Development for Meituan:
+
+    * Contributed to the development of company-wide SDKs including UUID (Uniform Device Identifier), a server-generated identifier shared across all Meituan apps.
+    * Developed the Passport SDK, providing unified functionality for user sign-up, login, and logout across all Meituan applications.
+
+## SKILLS
+* Proficient in *Java* and *Kotlin*.
+* Tools: Systemtrace and Perfetto.
+* Aspect-oriented Programming, Javassist and ASM.
+## EDUCATION
+### 2011.09~2015.06 　Xi'an Jiaotong University 　 Software Engineering 　Bachelor
