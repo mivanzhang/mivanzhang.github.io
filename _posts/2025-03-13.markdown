@@ -4,16 +4,19 @@
 * Email: mivanzhang@gmail.com
 * Linkedin: [https://www.linkedin.com/in/mengzhang-android](https://www.linkedin.com/in/mengzhang-android)
 * Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
+* Visa: Singapore PR
 
 ## EXPERIENCE
 ### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Expert Engineer 　Jun 2022 ~ Present
 * Cold startup time optimization:
-    * Reduced p80 cold startup time for Shopee (Southeast Asia’s largest e-commerce platform with over 20 million DAUs) from **7.6s** to **4.5s** by implementing parallel execution of startup tasks, multi-level image caching, and image preloading strategies.
-    * Achieved an **8%** reduction in p80 cold startup time by integrating Baseline Profiles, requiring extensive upgrades to multiple Gradle plugins, and automating Baseline Profile generation across different A/B test configurations. Grayscaled by regions.
+    * Reduced p80 cold startup time for Shopee (Southeast Asia’s largest e-commerce platform with over 20 million DAUs) from **7.6s** to **4.5s** by implementing parallel execution of startup tasks, multi-level image caching, and proactive image preloading, integrating Baseline Profiles, requiring extensive upgrades to multiple Gradle plugins, and automating Baseline Profile generation across different A/B test configurations. Grayscaled by regions.
     * Additional optimizations included raising Main and Render Thread priority, Dex2Oat enhancements, and leveraging prefetching and preloading techniques.
 * App fluency optimization:
-  * Improved block rate by **14%** through asynchronous image loading using Glide.
-  * Achieved a **5%** improvement in block rate by optimizing ImageView placeholders for faster rendering.
+  * Improved block rate by **14%** through asynchronous image loading using Glide, optimizing ImageView placeholders for faster rendering.
+* Chat optimization:
+  
+  * Improved message delivery success rate (P80) from **94%** to **99%** by implementing network optimization, user token expiration validation, and migrating from TCP to HTTP requests.
+  * Reduced chat conversation list P80 load time from  **1.35s** to **800ms**, and decreased chat room P80 load time from **926ms** to **600ms**.
 * Product and Communication Leadership:
 
   * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
@@ -52,9 +55,9 @@
     * Contributed to the development of company-wide SDKs including UUID (Uniform Device Identifier), a server-generated identifier shared across all Meituan apps.
     * Developed the Passport SDK, providing unified functionality for user sign-up, login, and logout across all Meituan applications.
 
-## SKILLS
+<!-- ## SKILLS
 * Proficient in *Java* and *Kotlin*.
 * Tools: Systemtrace and Perfetto.
-* Aspect-oriented Programming, Javassist and ASM.
+* Aspect-oriented Programming, Javassist and ASM. -->
 ## EDUCATION
 ### 2011.09~2015.06 　Xi'an Jiaotong University 　 Software Engineering 　Bachelor
