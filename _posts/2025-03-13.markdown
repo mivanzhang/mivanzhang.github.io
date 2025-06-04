@@ -1,26 +1,28 @@
 # Meng Zhang
 * English Name: Ivan
-* Chinese Name: Meng Zhang
 * Email: mivanzhang@gmail.com
+<!-- * Email: ivanlovebitcoin@gmail.com -->
 * Linkedin: [https://www.linkedin.com/in/mengzhang-android](https://www.linkedin.com/in/mengzhang-android)
 * Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
 * Visa: Singapore PR
 
 ## EXPERIENCE
 ### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Expert Engineer 　Jun 2022 ~ Present
+* Chat optimization:
+   * Reduced chat conversation list P80 rendering time from  **1.35s** to **800ms**, and decreased chat room P80 rendering time from **926ms** to **600ms**.
+  * Improved message delivery success rate (P80) from **94%** to **99%** by implementing network optimization, user token expiration validation, and migrating from TCP to HTTP requests.
+ 
+* Product and Communication Leadership:
+
+  * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
+  * Managed overall communication within the Chat team, overseeing the development and iteration of new message types, ensuring seamless feature rollouts and team coordination.
+  
 * Cold startup time optimization:
     * Reduced p80 cold startup time for Shopee (Southeast Asia’s largest e-commerce platform with over 20 million DAUs) from **7.6s** to **4.5s** by implementing parallel execution of startup tasks, multi-level image caching, and proactive image preloading, integrating Baseline Profiles, requiring extensive upgrades to multiple Gradle plugins, and automating Baseline Profile generation across different A/B test configurations. Grayscaled by regions.
     * Additional optimizations included raising Main and Render Thread priority, Dex2Oat enhancements, and leveraging prefetching and preloading techniques.
 * App fluency optimization:
   * Improved block rate by **14%** through asynchronous image loading using Glide, optimizing ImageView placeholders for faster rendering.
-* Chat optimization:
-  
-  * Improved message delivery success rate (P80) from **94%** to **99%** by implementing network optimization, user token expiration validation, and migrating from TCP to HTTP requests.
-  * Reduced chat conversation list P80 load time from  **1.35s** to **800ms**, and decreased chat room P80 load time from **926ms** to **600ms**.
-* Product and Communication Leadership:
 
-  * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
-  * Managed overall communication within the Chat team, overseeing the development and iteration of new message types, ensuring seamless feature rollouts and team coordination.
   
 <!-- * Implemented many bussiness features, such as bottom bar ainimation and popup windows -->
 
