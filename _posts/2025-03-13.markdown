@@ -1,27 +1,32 @@
 # Meng Zhang
 * English Name: Ivan
-* Email: mivanzhang@gmail.com
-<!-- * Email: ivanlovebitcoin@gmail.com -->
+* Email: mivanzhang@foxmail.com
+* Whatsapp: +65 80396310
 * Linkedin: [https://www.linkedin.com/in/mengzhang-android](https://www.linkedin.com/in/mengzhang-android)
 * Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
 * Visa: Singapore PR
 
-## EXPERIENCE
-### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Expert Engineer 　Jun 2022 ~ Present
-* Chat optimization:
-   * Reduced chat conversation list P80 rendering time from  **1.35s** to **800ms**, and decreased chat room P80 rendering time from **926ms** to **600ms**.
-  * Improved message delivery success rate (P80) from **94%** to **99%** by implementing network optimization, user token expiration validation, and migrating from TCP to HTTP requests.
- 
-* Product and Communication Leadership:
 
-  * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
-  * Managed overall communication within the Chat team, overseeing the development and iteration of new message types, ensuring seamless feature rollouts and team coordination.
+## EXPERIENCE
+### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Chat team leader　Jun 2022 ~ Present
+* Reduced chat conversation list P80 rendering time from **1.35s** to **800ms**, and chat room P80 rendering time from **926ms** to **600ms** by preloading and caching.
+* Increased message delivery success rate (P80) from **94%** to **99%** by:
+    * Adding user token expiration validation to reduce silent failures.
+    * Migrating message delivery from TCP to HTTP, improving reliability across varying network environments.
   
-* Cold startup time optimization:
-    * Reduced p80 cold startup time for Shopee (Southeast Asia’s largest e-commerce platform with over 20 million DAUs) from **7.6s** to **4.5s** by implementing parallel execution of startup tasks, multi-level image caching, and proactive image preloading, integrating Baseline Profiles, requiring extensive upgrades to multiple Gradle plugins, and automating Baseline Profile generation across different A/B test configurations. Grayscaled by regions.
-    * Additional optimizations included raising Main and Render Thread priority, Dex2Oat enhancements, and leveraging prefetching and preloading techniques.
+* Reduced p80 cold startup time from **7.6s** to **4.5s** for Shopee by:
+  * Executing startup tasks in parallel.
+  * Implementing a multi-level image caching system and proactive image preloading.
+  * Introducing Baseline Profiles, which involved Gradle plugin upgrades and automation of profile generation under varying A/B test conditions. 
+* Applied additional optimizations including:
+  * Raising Main and Render Thread priority.
+  * Dex2Oat tuning for faster class loading. 
+  * Prefetching key resources to eliminate UI delays.
 * App fluency optimization:
   * Improved block rate by **14%** through asynchronous image loading using Glide, optimizing ImageView placeholders for faster rendering.
+* Product and Communication Leadership:
+    * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
+    * Managed overall communication within the Chat team, overseeing the development and iteration of new message types, ensuring seamless feature rollouts and team coordination.
 
   
 <!-- * Implemented many bussiness features, such as bottom bar ainimation and popup windows -->

@@ -1,0 +1,53 @@
+# Meng Zhang
+* English Name: Ivan
+* Email: mivanzhang@foxmail.com
+* WhatsApp:+65 80396310
+* Linkedin: [https://www.linkedin.com/in/mengzhang-android](https://www.linkedin.com/in/mengzhang-android)
+* Github : [https://github.com/mivanzhang](https://github.com/mivanzhang)
+* Visa: Singapore PR
+
+## EXPERIENCE
+### [Shopee(E-Commerce)](https://shopee.sg) 　 Singapore　Expert Engineer 　Jun 2022 ~ Present
+* Reduced chat conversation list P80 rendering time from **1.35s** to **800ms**, and chat room P80 rendering time from **926ms** to **600ms** by preloading and caching.
+* Increased message delivery success rate (P80) from **94%** to **99%** by migrating message delivery from TCP to HTTP, improving reliability across varying network environments.
+  
+* Reduced p80 cold startup time from **7.6s** to **4.5s** for Shopee by:
+  * Executing startup tasks in parallel.
+  * Implementing a multi-level image caching system and proactive image preloading.
+  * Introducing Baseline Profiles, which involved Gradle plugin upgrades and automation of profile generation under varying A/B test conditions. 
+* Applied additional optimizations including:
+  * Raising Main and Render Thread priority.
+  * Dex2Oat tuning for faster class loading. 
+  * Prefetching key resources to eliminate UI delays.
+* Improved block rate by **14%** through asynchronous image loading using Glide, optimizing ImageView placeholders for faster rendering.
+* Product and Communication Leadership:
+    * Led the dynamic configuration development of the bottom navigation bar for Shopee's homepage, enhancing flexibility and user experience.
+    * Managed overall communication within the Chat team, overseeing the development and iteration of new message types, ensuring seamless feature rollouts and team coordination.
+
+  
+<!-- * Implemented many bussiness features, such as bottom bar ainimation and popup windows -->
+
+### [KuaiShou(Short Video)](https://www.kuaishou.com/) 　 Beijing　Expert Engineer 　Dec 2018 ~ Jun 2022
+
+* Reduced ANR rate for Kwai from **1.2%** to **0.7%** by resolving Broadcast, Service, and Input timeout issues.
+* Improved p50 cold startup time for KuaiShou by **28%**, reducing it from **5.6s** to **4.0s** through time-cost optimizations and continuous lab monitoring. 
+* Customized Flutter engine builds, reducing the Android engine size by **85.7%** (from 3.5M to 0.5M) via dynamic loading of libapp.so; a related [PR](https://github.com/dart-lang/sdk/pull/43312) was accepted by the Flutter team.
+* Improved [Tinker](https://github.com/Tencent/tinker) success rate from **80% to 94%**, enabling android developers to fix online bugs.
+* Modularized KuaiShou’s app code, significantly accelerating packaging speed and enhancing development efficiency for over 200 Android developers.
+
+### [Chain GrowUp(Startup) ](https://www.fbee.one/)　 Beijing　Android Team Leader 　Mar 2018 ~ Nov 2018
+
+  * Led a team of 2 through continuous iteration, handling development, testing, and successful launch of two apps from scratch. Launched [FbeePay](https://www.fbee.one/fbeepay), an Ethereum wallet with support for batch transactions and transaction cancellations and [Fbee](https://www.fbee.one/), which is a blockchain community app where users can create communities, engage with fans, and conduct token airdrops.
+
+
+### [Meituan(O2O)](https://www.meituan.com/) 　 Beijing　Senior Android Engineer 　Jul 2015 ~ Mar 2018
+
+   * Led the development of the [Robust SDK](https://github.com/Meituan-Dianping/Robust), achieving a **99.9%** success rate for hotfixes, enabling developers to fix online bugs without requiring a new app release. The project was open-sourced on GitHub, accumulating over **4k** stars, and accompanied by two articles published on the Meituan Technology Blog: [Android hot patch](https://tech.meituan.com/android_robust.html) and [Android hot patch solution Robust open source,add automated patch tools](https://tech.meituan.com/android_autopatch.html), discussing automated patching tools.
+  * Contributed to the development of company-wide SDKs including UUID (Uniform Device Identifier), a server-generated identifier shared across all Meituan apps and Passport SDK which is used to sign-up, login, and logout across all Meituan applications.
+
+<!-- ## SKILLS
+* Proficient in *Java* and *Kotlin*.
+* Tools: Systemtrace and Perfetto.
+* Aspect-oriented Programming, Javassist and ASM. -->
+## EDUCATION
+### 2011.09~2015.06 　Xi'an Jiaotong University 　 Software Engineering 　Bachelor
